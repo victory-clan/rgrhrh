@@ -7,22 +7,22 @@ const iKhaled = ['403516759228809218','403516759228809218'];
     var argresult = Khaled.content.split(` `).slice(1).join(' ');
       if (!iKhaled.includes(Khaled.author.id)) return;
   
-      if (Khaled.content.startsWith('Nwt')) {
+      if (Khaled.content.startsWith('!wt')) {
         client.user.setActivity(argresult, {type:'WATCHING'});
           client.user.setStatus("dnd")
           Khaled.channel.send(` ** Done. :white_check_mark: ** `)
       } else //Khaled 
-      if (Khaled.content.startsWith('Nls')) {//Khaled
+      if (Khaled.content.startsWith('!ls')) {//Khaled
           client.user.setActivity(argresult , {type:'LISTENING'});
             client.user.setStatus("idle")
             Khaled.channel.send(` ** Done. :white_check_mark: ** `)
       } else //Khaled
-          if (Khaled.content.startsWith('N$st')) {
+          if (Khaled.content.startsWith('!st')) {
             client.user.setGame(argresult, "https://www.twitch.tv/ikhaled321");
               client.user.setStatus("dnd")
               Khaled.channel.send(` ** Done. :white_check_mark: ** `)//Khaled
       } else 
-      if (Khaled.content.startsWith('Npl')) {
+      if (Khaled.content.startsWith('!pl')) {
         client.user.setActivity(argresult , {type:'PLAYING'});//Khaled
          client.user.setStatus("idle")
          Khaled.channel.send(` ** Done. :white_check_mark: ** `)
